@@ -12,14 +12,14 @@ import jakarta.transaction.Transactional;
 public class MovieServiceImpl implements MovieService{
 	private MovieDao movieDao;
 	public Movie addNewMovieService(Movie m) {
-		return movieDao.save(m);
+		return null;
 	}
 	public Movie searchMovieService(int movieCode) {
 		//to search by PK
-		return movieDao.findById(movieCode).orElseThrow(()-> new RuntimeException());
+		return null;
 	}
 	public List<Movie> allmoviesService() {
-		return movieDao.findAll();
+		return null;
 	}
 	public List<Movie> searchByGenreService(String genre) {
 		return null;
