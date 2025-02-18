@@ -1,10 +1,8 @@
 package com.cg.secure.model;
 
-import java.io.Serializable;
 
-public class JwtResponse implements Serializable {
+public class JwtResponse  {
 
-	private static final long serialVersionUID = -8091879091924046844L;
 	private final String jwttoken;
     private String role;
 	public JwtResponse(String jwttoken) {

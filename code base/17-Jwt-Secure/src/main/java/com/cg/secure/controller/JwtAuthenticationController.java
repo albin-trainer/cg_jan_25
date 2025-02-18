@@ -32,11 +32,11 @@ public class JwtAuthenticationController {
 
 	@PostMapping("/login")
 	public ResponseEntity<?> createAuthenticationToken(@RequestBody JwtRequest authenticationRequest) throws Exception {
-
+		//authentication
 		authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword());
-
+		//load the user details
 		final UserDetails userDetails = userDetailsService.loadUserByUsername(authenticationRequest.getUsername());
-
+//generate the token
 		final String token = jwtTokenUtil.generateToken(userDetails);
 		 String roles=userDetailsService.getRoles();
 		return ResponseEntity.ok(new JwtResponse(token,roles));

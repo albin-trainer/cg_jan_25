@@ -69,8 +69,7 @@ public class WebSecurityConfig/* extends WebSecurityConfigurerAdapter*/ {
 		httpSecurity.cors().and().csrf().disable()
 				// dont authenticate this particular request
 			.authorizeHttpRequests().
-			requestMatchers("/login", "/register",
-					"/swagger-ui/**","/v3/api-docs/**")
+			requestMatchers("/login", "/register")
 			.permitAll().
 				// all other requests need to be authenticated
 						anyRequest().authenticated()
