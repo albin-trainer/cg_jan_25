@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Employee_1 = require("./Employee");
+var a = 10;
+var msg = "Hello Good evening";
+var s = true;
+console.log(a);
+var emp = new Employee_1.Employee(555);
+emp.empId = 10001;
+emp.address = "Bangalore";
+emp.salary = 50000;
+emp.display();

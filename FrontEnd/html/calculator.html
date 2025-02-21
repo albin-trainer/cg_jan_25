@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: aqua;
+                background-image: url("https://img.freepik.com/free-vector/maths-realistic-chalkboard-background_23-2148159115.jpg");
+            }
+            table{
+                margin: auto;
+                margin-top: 10%;
+                border-style: solid;
+                padding: 5%;
+                background-color: rgb(189, 204, 231);
+                border-color: brown;
+                border-radius: 5%;
+            }
+        </style>
+        <script>
+            function calculator(m){
+                var n1=document.getElementById("fno").value;
+                var n2=document.getElementById("sno").value;
+            var r=0;
+            if(m=="add") {
+                 r=  parseInt(n1) + parseInt (n2);
+                document.getElementById("result").value=r;
+            }
+            else if (m=="diff"){
+                r=  parseInt(n1) - parseInt (n2);
+                document.getElementById("result").value=r;
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td> Enter first no</td>
+                <td> <input type="text" id="fno"></td>
+            </tr>
+            <tr>
+                <td>
+                    Enter second no 
+                </td>
+                <td>
+                    <input type="text" id="sno"> 
+                </td>
+            </tr>
+            <tr>
+                <td>Result</td>
+                <td><input type="text" id="result"> </td>
+            </tr>
+            <tr>
+                <td><button onclick="calculator('add')">Add</button></td>
+                <td><button onclick="calculator('diff')">Diff</button></td>
+            </tr>
+        </table>        
+       
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script>
+            var emptyArray=[]; //empty array
+            var nums=[1,2,3,4,5,6,7,8,9];
+            for(i=0;i<=nums.length;i++){
+                console.log(nums[i]);
+            }
+            console.log("------------------");
+            for(v of nums){ //like foreach loop
+                console.log(v);
+            }
+
+            nums.forEach(x=>console.log(x)); //print is passed to forEach function 
+          /*  function print(x){
+                console.log("******"+x+"********")
+            }*/
+           //convert into Arrow function
+           //returns new Array
+          var evenArr= nums.filter(filterEvens);
+
+           function filterEvens(x){
+            return x%2==0;
+           }
+           console.log(evenArr);
+           //returns new Array
+           var squares=nums.map(findSquars);
+           function findSquars(x){
+                return x*2;
+           }
+           console.log("--------------")
+           console.log(squares);
+        </script>
+    </head>
+</html>

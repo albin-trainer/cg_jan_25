@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <script>
+            function calculator(c, a,b){
+                var r= c(a,b);
+                return r;
+            }          
+
+        /*    var result=calculator(function add(a,b){
+                return a+b;
+            },9,10);*/
+            var result=calculator((a,b)=>a+b,10,50)
+            alert(result);
+
+            
+        </script>
+    </head>
+</html>

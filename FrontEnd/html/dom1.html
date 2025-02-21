@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            p{
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                color: burlywood;
+                background-color: rgb(179, 52, 52);
+                
+            }
+        </style>
+        <script>
+            function moveParagraph(direction){
+               var pnode=  document.getElementById("p1");
+               pnode.setAttribute("align",direction);
+            }
+        </script>
+    </head>
+    <body>
+        
+        <p align="right" id="p1">
+            Good morning
+        </p>
+        <button onclick="moveParagraph('left')" >LEFT</button>
+        <button onclick="moveParagraph('center')" >CENTER</button>
+        <button onclick="moveParagraph('right')" >RIGHT</button>
+        <br>
+        <img width="100px" src="https://m.media-amazon.com/images/I/61paoQad7gL._AC_UF1000,1000_QL80_.jpg">
+        <button>Teddy</button>
+        <button>Spider man</button>
+        <button>Shinchan</button>
+    </body>
+</html>
