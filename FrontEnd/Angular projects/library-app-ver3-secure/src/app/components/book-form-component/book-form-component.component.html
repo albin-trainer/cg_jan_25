@@ -1,0 +1,63 @@
+<div class="container bookc">
+    <form class="addbook col-md-4" (ngSubmit)="submitForm()">
+        <div class="mb-3">
+          <label for="id" class="form-label">Book Id</label>
+          <input type="text" class="form-control" name="bookId"
+           #bid="ngModel" required [(ngModel)]="book.bookId"  id="id">
+               
+           <div  *ngIf="(bid.invalid && bid.touched)"  
+         class="alert alert-danger">bookId is required</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="bookName" class="form-label">BookName</label>
+          <input type="text"   class="form-control"
+           required minlength="2" maxlength="10" 
+           [(ngModel)]="book.bookName" #bname="ngModel" name="bookname">
+          <div *ngIf="(bname.invalid && bname.touched)" class="alert alert-danger">
+            <div *ngIf="bname.errors?.['required']">plx enter bname</div>
+            <div *ngIf="bname.errors?.['minlength']">bookName need alteast 2 chars</div>
+
+            <div *ngIf="bname.errors?.['maxlength']">max 10 chars allowed</div>
+
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="Genre" class="form-label">Genre</label>
+            <select class="form-control" id="genre" name="genre" [(ngModel)]="book.genre" >
+                    <option></option>
+                    <option>SCIFI</option>
+                    <option>DRAMA</option>
+                    <option>COMEDY</option>
+                    <option>HORROR</option>
+                    <option>ROMANCE</option>
+                    <option>FANTANCY</option>
+                    <option>THIRILLER</option>
+                </select>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" class="form-control"
+            #p="ngModel"  [(ngModel)]="book.price" name="price"
+            id="price" min="0" required max="999999">
+            <div  *ngIf="(p.invalid && p.touched)"  
+            class="alert alert-danger">
+            <div *ngIf="p.errors?.['required']">Price is required.</div>
+            <div *ngIf="p.errors?.['min']">Price must be at least 0.</div>
+            <div *ngIf="p.errors?.['max']">Price must be less than or equal to 999,999.</div>
+          </div>
+          </div>
+          <div class="mb-3">
+            <label for="cover" class="form-label">Cover URL</label>
+            <input type="text" class="form-control" id="cover">
+          </div>
+          <div class="mb-3">
+            <label for="authourid " class="form-label">authourId</label>
+            <input type="text" class="form-control" name="authourId" [(ngModel)]="book.authourId" id="authourid">
+          </div>
+        <button type="submit" [disabled]="bid.invalid" class="btn btn-primary">{{toDo}}</button>
+      </form>
+      <div class="addbook col-md-4" >
+        <img width="600px" src="https://www.londonlibrary.co.uk/images/20210408113322.JPG">
+      </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="searchBox  col-md-4">
+    Search Books <input type="text" [(ngModel)]="searchText"
+     class="form-control" (keyup)="searchBooks()"  >
+    </div>
+    <book-card-component [bookList]="books" (delEvent)="removeBook($event)" ></book-card-component>
+</div>
+
+
