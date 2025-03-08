@@ -4,9 +4,9 @@
           
             <img src={{b.cover}} class="card-img-top" alt="..." width="50px">
             <div class="card-body">
-              <h5 class="card-title">{{b.bookName}}</h5>
+              <h5 class="card-title">{{b.bookName | uppercase  }}</h5>
               <p class="card-text">{{b.genre}}</p>
-              <p class="card-text">price : {{b.price}}</p>
+              <p class="card-text">price : {{b.cost | currency :'INR' }}</p>
               <a href="addbook/{{b.bookId}}" class="fa fa-pencil-square-o fa-2x"></a>
               <a href="">View authour info</a>
               <a (click)="deleteBook(b.bookId)"  class="fa fa-trash fa-2x pull-right"  aria-hidden="true" ></a>

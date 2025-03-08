@@ -11,7 +11,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class BookFormComponentComponent implements OnInit {
  
-  book:Book={bookId:0,bookName:"HELLO",genre:"",price:10,cover:"",authourId:0}
+  book:Book={bookId:0,bookName:"HELLO",genre:"",cost:10,cover:"",authourId:0}
   isAdd:boolean=false;
   toDo="Edit";
 constructor(private router:Router,private route:ActivatedRoute,  private ds:DataServiceService){

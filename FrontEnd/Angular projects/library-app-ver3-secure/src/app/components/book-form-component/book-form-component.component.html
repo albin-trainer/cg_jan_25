@@ -38,7 +38,7 @@
           <div class="mb-3">
             <label for="price" class="form-label">Price</label>
             <input type="number" class="form-control"
-            #p="ngModel"  [(ngModel)]="book.price" name="price"
+            #p="ngModel"  [(ngModel)]="book.cost" name="price"
             id="price" min="0" required max="999999">
             <div  *ngIf="(p.invalid && p.touched)"  
             class="alert alert-danger">

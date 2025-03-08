@@ -30,6 +30,7 @@ export class LoginComponent  {
     (data:any)=>{console.log(data);
       sessionStorage.setItem("token","Bearer "+data.token);
       sessionStorage.setItem("username",this.username);
+      sessionStorage.setItem("isLoggedIn","true");
       this.router.navigate(["/books"]) 
     }
     ,error=>{
