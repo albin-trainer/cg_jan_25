@@ -1,0 +1,21 @@
+<div>
+  <h1>Profile </h1>
+  <h2> {{id}} {{ename}}</h2>
+<div *ngIf="!isEditMode; else myfragment">
+  <div>
+      READ MODE
+      City :{{city}}
+      <br>
+      <button (click)="editModeOn()">Go to Edit mode</button>
+  </div>
+</div>
+<ng-template #myfragment>
+  <div>
+   EDIT MODE
+   city <input type="text" [(ngModel)]="city" name="n">
+   <br>
+   <button (click)="editModeOff()">Go to READ mode</button>
+  </div>
+</ng-template>
+</div>
+<app-emps (e)="selectedEmp($event)"></app-emps>

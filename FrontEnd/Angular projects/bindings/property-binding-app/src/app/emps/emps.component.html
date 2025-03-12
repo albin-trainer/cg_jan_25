@@ -1,0 +1,15 @@
+<p>emps works!</p>
+<table>
+    <tr>
+    <th>id</th>
+    <th>Name</th>
+    <th>Delete</th>
+
+    </tr>
+    <tr *ngFor="let e of emps">
+         <td>{{e.id}}</td>
+        <td>{{e.ename}}</td>
+        <td><button (click)="deleteEmp(e.id)">delete</button></td>
+        <td><button (click)="choseEmp(e)">Select </button></td>
+    </tr>
+</table>
